@@ -1,0 +1,15 @@
+= simple_form_for(project_content) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :project_id, as: :hidden
+    = f.input :title
+    = f.input :value
+    .extra-fields
+      = f.input :sort_order
+      = f.input :width
+      = f.input :left_margin
+      = f.input :right_margin
+
+  .form-actions
+    = f.button :submit

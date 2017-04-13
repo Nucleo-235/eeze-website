@@ -1,0 +1,36 @@
+section#portfolio
+  .project-gallery class="#{@projects.length % 2 == 0 ? '' : 'odd' }"
+    - @projects.each_with_index do |project, index|
+      .project-thumb id="#{project.slug}-thumb" class="#{@can_edit ? 'admin' : ''}"
+        a.open-project.item-container href="##{project.slug}"
+          .images
+            / = image_bg_editor(project, :thumb_image, :div, { :class => 'thumb-image' })
+              img src="#{project.thumb_image}"
+            .thumb-image style='background-image:url("#{project.thumb_image}")'
+              img src="#{project.thumb_image}"
+            .logo-image style='background-image:url("#{project.logo_image}")'
+              img src="#{project.logo_image}"
+          .info
+            .name
+              strong.name-value = project.name
+  - if @can_edit
+    #new-project
+      = render partial: 'projects/form', locals: { project: @new_project }
+  - if @projects.length > 0
+    .project-container
+      .list-container
+        .project-list
+          .project-slick
+            - @projects.each do |project|
+              .project-item id="#{project.slug}" class="#{@can_edit ? 'admin' : ''}"
+                = render partial: 'projects/show', locals: { project: project }
+                - if @can_edit
+                  = render partial: 'projects/content_forms', locals: { project: project }
+
+        .actions
+          a.close-project href="" title="#{t('global.close')}"
+            img src="#{image_path('icone-fechar-janela.png')}" alt="#{t('global.close')}"
+          a.move-to-previous href="#previous" title="#{t('global.previous')}"
+            img src="#{image_path('arrow-left.png')}" alt="#{t('global.previous')}"
+          a.move-to-next href="#next" title="#{t('global.next')}"
+            img src="#{image_path('arrow-right.png')}" alt="#{t('global.next')}"
