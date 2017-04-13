@@ -2,8 +2,7 @@
 lock '3.4.0'
 
 set :application, 'eeze-website'
-# set :repo_url, 'git@github.com:Nucleo-235/eeze-website.git' # Edit this to match your repository
-set :repo_url, 'git@bitbucket.org/nucleo235/eeze-website.git' 
+set :repo_url, 'git@github.com:Nucleo-235/eeze-website.git' # Edit this to match your repository
 set :branch, :live
 
 set :deploy_to, '/home/deploy-eeze/eeze-website'
