@@ -13,14 +13,16 @@
  *= require_self
  */
 
-@import "bourbon";
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reboot";
+@import "bootstrap/normalize";
+@import "bootstrap/navbar";
+@import "bootstrap/utilities/position";
 @import "font-awesome";
 @import "inplace_editing";
 
-@import "fonts";
-@import "mixins";
-@import "mq";
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Teko:300,400');
 @import "variables";
+@import "fonts";
 @import "global";
