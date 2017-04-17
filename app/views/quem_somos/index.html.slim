@@ -1,0 +1,32 @@
+section#quem-somos
+  img src="#{image_path('quemsomos.jpg')}"
+  h1 Lorem ipsum dolor sit amec.
+  p 
+    | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+    | <br/><br/> Nam nec cellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
+	
+  div.team
+    img src="#{image_path('slide.png')}"
+    .role
+      span CEO & Comercial
+      h2 Marcellus Santos
+  div.team
+    img src="#{image_path('slide.png')}"
+    .role
+      span CEO & Desenvolvedor
+      h2 Felipe Pimentel
+      
+  #contact-form 
+    h2 Contato
+    p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+
+    = simple_form_for @contact, url: contact_form_path, method: :post, html: { class: 'my_wrapper_id' } do |f|
+
+      = f.input :name, :required => true
+      = f.input :email, :required => true
+      = f.input :subject, :required => true
+      = f.input :message, :as => :text, input_html: { :rows => 10 }, :required => true
+      
+      = f.button :submit, :class=> 'btn'
+
+  
