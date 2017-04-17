@@ -1,15 +1,41 @@
+body {
+    position: relative;
+    padding: 60px 0 130px 0;
+    min-height: 100vh;
+}
+
 body[class="pages#home"] {
-  background-color: $color__bg;
-  background-image: $bg__boxes;
-  min-height: 100vh;
-  padding-top: 60px;
+    background-color: $color__bg;
+    background-image: $bg__boxes;
+}
+
+a:focus, a:hover {
+    color: currentColor;
+    text-decoration: none;
 }
 
 .navbar {
     min-height: 60px;
     justify-content: center;
+    flex-flow: column wrap;
     background: linear-gradient(to right, $color__red, $color__pink);
+    transition: margin .25s;
     a, button { display: flex; }
+    button { top: 0.75rem; }
+}
+
+#navbarCollapse ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    li a {
+       font-family: $font__text;
+       color: #fff;
+       font-size: 20px;
+       padding: 24px 0 16px 0;
+       justify-content: center;
+   }
 }
 
 footer {
@@ -21,6 +47,9 @@ footer {
     background: linear-gradient(to top, $color__red, $color__pink);
     background-size: 100% 150%;
     background-position: center bottom;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     a { zoom: 1.2; margin-bottom: 8px; }
     small { font-size: 8px; color: #fff; }
 }
@@ -29,6 +58,7 @@ footer {
 //HOME
 #brand {
     height: calc(100vh - 60px);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
