@@ -9,6 +9,12 @@ body[class="pages#home"] {
     background-image: $bg__boxes;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 a:focus, a:hover {
     color: currentColor;
     text-decoration: none;
@@ -20,8 +26,13 @@ a:focus, a:hover {
     flex-flow: column wrap;
     background: linear-gradient(to right, $color__red, $color__pink);
     transition: margin .25s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
     a, button { display: flex; }
-    button { top: 0.75rem; }
+    button { top: 0.75rem; padding: 4px 0; }
 }
 
 #navbarCollapse ul {
@@ -93,4 +104,29 @@ footer {
   }
   .projetos { background-image: url(image_path('projetos.jpg')); }
   .quemsomos { background-image: url(image_path('quemsomos.jpg')); }
+}
+
+
+
+// PEPSI
+body[class="pepsi#index"] {
+  background-image:  url(image_path('pattern-pepsi.png')), $bg__gradient_full;
+}
+
+#project {
+    padding: 40px 16px 0 16px;
+    > img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+    }
+    h1 { margin: 0.67em 0 0 0; }
+    p { color: #fff; margin-left: 24px; }
+    .carousel img { max-height: 300px; }
+    iframe {
+      width: calc(100% + 32px);
+      min-height: 100%;
+      margin-left: -16px;
+      margin-bottom: -5px;
+    }
 }

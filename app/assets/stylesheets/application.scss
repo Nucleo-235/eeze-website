@@ -15,11 +15,14 @@
 
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
+@import "bootstrap/mixins/image";
 @import "bootstrap/reboot";
 @import "bootstrap/normalize";
-@import "bootstrap/navbar";
-@import "bootstrap/transitions";
 @import "bootstrap/utilities/position";
+@import "bootstrap/utilities/display";
+@import "bootstrap/transitions";
+@import "bootstrap/navbar";
+@import "bootstrap/carousel";
 @import "font-awesome";
 @import "inplace_editing";
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pepsi
   resources :projects
   resources :project_contents
   resources :image_project_contents
