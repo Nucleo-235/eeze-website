@@ -13,3 +13,4 @@ $font__text: 'EB Garamond', serif;
 $bg__boxes: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20L0 20z' fill='%231f3360' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 $bg__gradient: linear-gradient(to top, $color__purple,  rgba($color__main, 0%));
 $bg__gradient_full: linear-gradient(to top, $color__pink, $color__red 25%, $color__purple 70%,  $color__main);
+$bg__gradient_full2: linear-gradient(to top, $color__pink, $color__red 25%, $color__purple 80%,  rgba($color__main, 0%));

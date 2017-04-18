@@ -1,0 +1,84 @@
+body[class="pepsi#index"] {
+  background-image:  url(image_path('pattern-pepsi.png')), $bg__gradient_full;
+}
+
+#project {
+    padding: 40px 16px 0 16px;
+    > img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+        object-position: 46% 50%;
+    }
+    h1 { margin: 0.67em 0 0 0; }
+    p { color: #fff; margin-left: 24px; }
+    .carousel-item {
+      height: 50vw;
+      img { width: 100%; height: auto; }
+    }
+    iframe {
+      width: calc(100% + 32px);
+      min-height: 100%;
+      margin-left: -16px;
+      margin-bottom: -5px;
+    }
+}
+
+
+//Desktop only
+#scroll-project {
+    margin: 32px auto 0px auto;
+    width: 2px;
+    opacity: .5;
+}
+#project-tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 40px 0;
+    border-bottom: none;
+    li {
+        font-size: 2.5em;
+        a {
+            @include titles;
+            opacity: .6;
+            padding: 8px 0;
+            background-color: transparent;
+            border: none;
+            &.active {
+                opacity: 1;
+                border-bottom: solid 2px;
+                border-color: #fff;
+            }
+        }
+    }
+}
+#project-content {
+    padding: 16px 0;
+    > div:not([id="processo"]) {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+}
+
+
+
+@include media-breakpoint-down(md) {
+    #project-content > div {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    #project {
+        > img {
+            height: 500px;
+            object-position: 50% 50%;
+        }
+        h1 { display: none; }
+        p { margin-left: 0; }
+    }
+}

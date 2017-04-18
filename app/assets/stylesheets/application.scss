@@ -20,15 +20,20 @@
 @import "bootstrap/normalize";
 @import "bootstrap/utilities/position";
 @import "bootstrap/utilities/display";
+@import "bootstrap/utilities/visibility";
 @import "bootstrap/transitions";
+@import "bootstrap/nav";
 @import "bootstrap/navbar";
 @import "bootstrap/carousel";
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
 @import "font-awesome";
 @import "inplace_editing";
+@import "animate";
 
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Teko:300,400');
 @import "variables";
 @import "fonts";
 @import "global";
+@import "project";
+@import "quemsomos";

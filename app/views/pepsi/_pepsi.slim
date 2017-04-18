@@ -1,0 +1,45 @@
+img src="#{image_path('logo-pepsi@big.png')}"
+#scroll-project.hidden-lg-down = svg 'scroll-project'
+
+ul#project-tabs class="nav nav-tabs hidden-lg-down" role="tablist"
+  li class="nav-item"
+    a class="nav-link active" data-toggle="tab" href="#sinopse" role="tab" Sinopse
+  li class="nav-item"
+    a class="nav-link" data-toggle="tab" href="#processo" role="tab" Processo
+  li class="nav-item"
+    a class="nav-link" data-toggle="tab" href="#messages" role="tab" Gameplay
+
+#project-content.tab-content
+  #sinopse class="tab-pane fade show active" role="tabpanel"
+    h1 Sinopse
+    p 
+      | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+      | <br/><br/> Nam nec cellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
+  
+  #processo class="tab-pane fade" role="tabpanel" 
+    h1 Processo
+    p  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+    #carousel class="carousel slide hidden-md-up" data-ride="carousel"
+      ol class="carousel-indicators"
+        - for i in (0..2)
+          - if (i == 0)
+            li.active data-target="#carousel" data-slide-to="#{i}"
+          -  else
+            li data-target="#carousel" data-slide-to="#{i}"
+      .carousel-inner role="listbox"
+        - for i in (1..3)
+          - if (i == 1)
+            .carousel-item.active 
+              img class="d-block img-fluid" src="#{image_path(i)}" alt="slide#{i}"
+          - else
+            .carousel-item 
+              img class="d-block img-fluid" src="#{image_path(i)}" alt="slide#{i}"
+              
+    / #masonry-container.clearfix 
+    /   - for i in (1..3)
+    /     img class="box" src="#{image_path(i)}" alt="slide#{i}"
+
+              
+  #messages class="tab-pane fade" role="tabpanel"
+    h1 Gameplay
+    iframe src="http://player.vimeo.com/video/153875405" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""

@@ -1,0 +1,45 @@
+body[class="quem_somos#index"] {
+  background-image: $bg__gradient_full;
+}
+
+#quem-somos {
+    padding: 12px;
+    color: #fff;
+    > h1 {
+       padding: 0 12px;
+       margin: -24px 0 0 0;
+    }
+    p { padding: 16px 16px 0 40px; }
+
+    .team {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 16px;
+      img { width: 48vw; height: 38vw; }
+      .role {
+          padding: 12px;
+          h2 { margin-left: -24px; }
+      }
+    }
+
+    #contact-form {
+      margin: 40px 0;
+
+      form { padding: 16px 32px 0 40px; }
+      .form-group { margin-bottom: .5rem; }
+      label, .help-block{ display: none; }
+      ::-webkit-input-placeholder  { color:rgba(255, 255, 255, 0.5); }
+      input, textarea {
+          background-color: rgba(255, 106, 236, 0.85);
+          color: #fff;
+          border-radius: 0;
+          border-color: rgba(255, 255, 255, 0.5);
+      }
+      input.btn{
+          width: 100%;
+          background-color: #fff;
+          color: #a93569;
+      }
+    }
+
+}
