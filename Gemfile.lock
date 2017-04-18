@@ -277,6 +277,7 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     orm_adapter (0.5.0)
+    parallax-rails (1.0.0)
     pg (0.19.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -456,6 +457,7 @@ DEPENDENCIES
   omniauth-instagram
   omniauth-linkedin
   omniauth-twitter
+  parallax-rails
   pg
   pry-rails
   puma

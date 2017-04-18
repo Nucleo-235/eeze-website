@@ -4,7 +4,7 @@ body[class="pepsi#index"] {
 
 #project {
     padding: 40px 16px 0 16px;
-    > img {
+    #parallax-container > img {
         width: 100%;
         height: 240px;
         object-fit: contain;
@@ -63,9 +63,14 @@ body[class="pepsi#index"] {
 
 @include media-breakpoint-up(lg) {
     #project {
-        > img {
+        *:not([id="parallax-scene"]) {
+          z-index: 1;
+        }
+        #parallax-container { min-height: 500px; }
+        #parallax-container > img {
             height: 500px;
             object-position: 48% 50%;
+            position: absolute;
         }
         h1 { display: none; }
         p { margin-left: 0; }
@@ -89,4 +94,27 @@ body[class="pepsi#index"] {
             top: 106px;
         }
     }
+    #parallax-scene {
+        height: 500px;
+        .layer {
+          right: 0;
+          img { position: absolute;  zoom: 0.7; }
+          &:nth-child(1) img { right: 100px; zoom: 1; }
+          &:nth-child(2) img { top: 320px; right: 0px; }
+          &:nth-child(3) img { left: 500px; }
+          &:nth-child(4) img { top: 200px; right: 0; left:0; margin: 0 auto; }
+          &:nth-child(5) img { top: 200px; right: 450px; }
+          &:nth-child(6) img { right: 0; }
+          &:nth-child(7) img { left: 100px; }
+          &:nth-child(8) img { left: 300px; }
+          &:nth-child(9) img { top: 400px; right: 100px; }
+          &:nth-child(10) img { top: 500px; left: 100px; }
+          &:nth-child(11) img { top: 800px; }
+        }
+    }
+
+}
+
+@include media-breakpoint-up(xl) {
+  #parallax-scene .layer img { zoom: .85; }
 }

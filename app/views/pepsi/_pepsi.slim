@@ -1,7 +1,14 @@
-img src="#{image_path('logo-pepsi@big.png')}"
+#parallax-container
+  img src="#{image_path('logo-pepsi@big.png')}"
+  ul#parallax-scene
+     - if (@parallax)
+       - for i in @parallax do
+        li class="layer" data-depth="#{i[1]}"
+          img src="#{image_path(i[0])}"
+  
 #scroll-project.hidden-lg-down = svg 'scroll-project'
 
-ul#tabs class="nav nav-tabs hidden-lg-down" role="tablist"
+ul#tabs class="nav nav-tabs hidden-md-down" role="tablist"
   li class="nav-item"
     a class="nav-link active" data-toggle="tab" href="#sinopse" role="tab" Sinopse
   li class="nav-item"
@@ -40,10 +47,10 @@ ul#tabs class="nav nav-tabs hidden-lg-down" role="tablist"
               
   #gameplay class="tab-pane fade" role="tabpanel"
     h1 Gameplay
-  	img.hidden-lg-down src="#{image_path('gameplay.png')}" alt="Gameplay"
+  	img.hidden-md-down src="#{image_path('gameplay.png')}" alt="Gameplay"
     iframe src="http://player.vimeo.com/video/143253867?title=0&byline=0&portrait=0" width="284" height="505" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
 		
-.grid.hidden-lg-down
+.grid.hidden-md-down
 	.box
 		img src="#{image_path(1)}"
 	.box
