@@ -20,18 +20,16 @@ pt-BR:
   simple_form:
     labels:
       contact_form:
-        name: 'Nome'
-        email: 'Email'
+        name: 'Seu Nome'
+        email: 'Seu Email'
         subject: 'Assunto'
-        message: 'Mensagem'
+        message: 'Sua Mensagem'
     placeholders:
       contact_form:
-        name: 'Nome'
-        email: 'Email'
-        subject: 'Assunto'
-        message: 'Mensagem'
-
-
+        name: 'Nome / Sobrenome'
+        email: 'Email para contato'
+        subject: 'Assunto do email'
+        message: 'Digite o que quiser'
 
   mail_form:
     errors:

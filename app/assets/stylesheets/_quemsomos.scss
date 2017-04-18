@@ -5,7 +5,7 @@ body[class="quem_somos#index"] {
 #quem-somos {
     padding: 12px;
     color: #fff;
-    > h1 {
+    #quemsomos > h1 {
        padding: 0 12px;
        margin: -24px 0 0 0;
     }
@@ -28,7 +28,10 @@ body[class="quem_somos#index"] {
       form { padding: 16px 32px 0 40px; }
       .form-group { margin-bottom: .5rem; }
       label, .help-block{ display: none; }
-      ::-webkit-input-placeholder  { color:rgba(255, 255, 255, 0.5); }
+      ::-webkit-input-placeholder  {
+        color:rgba(255, 255, 255, 0.5);
+        letter-spacing: .05em;
+      }
       input, textarea {
           background-color: rgba(255, 106, 236, 0.85);
           color: #fff;
@@ -42,4 +45,51 @@ body[class="quem_somos#index"] {
       }
     }
 
+}
+
+//Desktop only
+@include media-breakpoint-up(lg) {
+    #quem-somos {
+      padding: 40px 0 80px 0;
+      display: flex;
+      flex-flow: row nowrap;
+        > img { flex: 0 0 40%; width: 40% }
+        > #tab-container { flex: 0 0 60%; padding: 0 56px; }
+        #contact-form > h2 { display: none }
+        .team img { width: 250px; height: 160px; }
+        #quemsomos > h1 { margin: 0; }
+        #tabs {
+            padding-top: 0;
+            justify-content: flex-start;
+            li {
+               margin-right: 80px;
+           }
+        }
+
+        #contact-form {
+          margin: 0;
+          > p, > form { padding: 0 40px 0 0; }
+          input, textarea {
+            background: none;
+            border: none;
+            border-bottom: solid 1px;
+          }
+          textarea {
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTEzQzc0N0QxQzczMTFFN0IzOTVENUM0NTQwODVFRTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTEzQzc0N0UxQzczMTFFN0IzOTVENUM0NTQwODVFRTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMTNDNzQ3QjFDNzMxMUU3QjM5NUQ1QzQ1NDA4NUVFNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMTNDNzQ3QzFDNzMxMUU3QjM5NUQ1QzQ1NDA4NUVFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuNnC7QAAAL9SURBVHja7NbBCQAgDARBI/bf8mkReUSYgTRwjyWVZAH8YJsAECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECwAwQIEC0CwAAQLECwAwQIQLECwAAQLQLAAwQIQLADBAgQLQLAAwQIQLADBAgQLQLAABAsQLADBAhAsQLAABAtAsADBAhAsAMECBAtAsAAECxAsAMECECxAsAAEC0CwAMECECxAsEwACBaAYAGCBSBYAIIFCBaAYAEIFiBYAIIFIFiAYAEIFoBgAYIFIFgAggUIFoBgAQgWIFgAggUgWIBgAQgWgGABggUgWIBgAQgWQK/zLmYAfFgAggUIFoBgAQgWIFgAggUgWIBgAYxxBRgAAOcGVq9zIOEAAAAASUVORK5CYII=');
+              background-size: 30px auto;
+              line-height: 30px;
+              border-bottom: none;
+          }
+          label {
+              display: flex;
+              color: $color__darken;
+              font-family: $font__text;
+              font-weight: 700;
+              font-size: 20px;
+              abbr { order: 2; }
+          }
+          input.btn { height: 60px; }
+          .form-control { padding: 0.5rem 0; }
+        }
+    }
 }

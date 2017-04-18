@@ -31,31 +31,8 @@ body[class="pepsi#index"] {
     width: 2px;
     opacity: .5;
 }
-#project-tabs {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 40px 0;
-    border-bottom: none;
-    li {
-        font-size: 2.5em;
-        a {
-            @include titles;
-            opacity: .6;
-            padding: 8px 0;
-            background-color: transparent;
-            border: none;
-            &.active {
-                opacity: 1;
-                border-bottom: solid 2px;
-                border-color: #fff;
-            }
-        }
-    }
-}
-#project-content {
+
+#tab-content {
     > div:not([id="processo"]) {
       max-width: 768px;
       margin: 0 auto;
@@ -84,15 +61,6 @@ body[class="pepsi#index"] {
   .box-b img{ width: 384px; height: 384px; }
 }
 
-
-
-@include media-breakpoint-down(md) {
-    #project-content > div {
-        display: block;
-        opacity: 1;
-    }
-}
-
 @include media-breakpoint-up(lg) {
     #project {
         > img {
@@ -101,7 +69,7 @@ body[class="pepsi#index"] {
         }
         h1 { display: none; }
         p { margin-left: 0; }
-        #project-content { padding: 80px 0; }
+        #tab-content { padding: 80px 0; }
         #gameplay.active {
             position: relative;
             display: flex;

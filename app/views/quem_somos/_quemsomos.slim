@@ -1,0 +1,40 @@
+img src="#{image_path('quemsomos.jpg')}"
+#tab-container
+  ul#tabs class="nav nav-tabs hidden-lg-down" role="tablist"
+    li class="nav-item"
+      a class="nav-link" data-toggle="tab" href="#quemsomos" role="tab" Quem Somos
+    li class="nav-item"
+      a class="nav-link active" data-toggle="tab" href="#contato" role="tab" Contato
+
+  #tab-content.tab-content
+    #quemsomos class="tab-pane fade" role="tabpanel"
+      h1 Lorem ipsum dolor sit amec.
+      p 
+        | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+        | <br/><br/> Nam nec cellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
+
+      div.team
+        img src="#{image_path('slide.png')}"
+        .role
+          span CEO & Comercial
+          h2 Marcellus Santos
+      div.team
+        img src="#{image_path('slide.png')}"
+        .role
+          span CEO & Desenvolvedor
+          h2 Felipe Pimentel
+          
+    
+    #contato class="tab-pane fade show active" role="tabpanel"   
+      #contact-form 
+        h2 Contato
+        p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+
+        = simple_form_for @contact, url: contact_form_path, method: :post, html: { class: 'my_wrapper_id' } do |f|
+
+          = f.input :name, :required => true
+          = f.input :email, :required => true
+          = f.input :subject, :required => true
+          = f.input :message, :as => :text, input_html: { :rows => 10 }, :required => true
+          
+          = f.button :submit, :class=> 'btn'
