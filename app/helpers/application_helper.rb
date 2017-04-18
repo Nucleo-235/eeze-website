@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def ids_to_select_options(prefix, list)
     list.map do |id|
-      [I18n.t('select_options.' + prefix + '.' + id),  id] 
+      [I18n.t('select_options.' + prefix + '.' + id),  id]
     end
   end
 
@@ -46,5 +46,11 @@ module ApplicationHelper
     rescue
       ""
     end
+  end
+
+  def svg(name)
+    file_path = "#{Rails.root}/app/assets/images/#{name}.svg"
+    return File.read(file_path).html_safe if File.exists?(file_path)
+    '(not found)'
   end
 end

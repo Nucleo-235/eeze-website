@@ -1,0 +1,12 @@
+section#links class="hidden-lg-up"
+  - if @current_page.page_uid != 'pepsi#index'
+    a.projetos href="/pepsi"
+      h1 Projetos
+      span Veja o que já fizemos
+  - if @current_page.page_uid != 'quem_somos#index'
+    a.quemsomos href="/quem_somos"
+      h1 Quem Somos
+      span Saiba mais sobre a eeze
+footer
+  a href="" = svg 'logo'
+  small Todos os direitos são reservados a eeze® game studio.

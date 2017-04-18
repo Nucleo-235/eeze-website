@@ -11,3 +11,32 @@ pt-BR:
       ImageProjectContent: imagem
       YoutubeProjectContent: YouTube
       VimeoProjectContent: Vimeo
+
+  helpers:
+    submit:
+      contact_form:
+        create: 'Enviar'
+
+  simple_form:
+    labels:
+      contact_form:
+        name: 'Seu Nome'
+        email: 'Seu Email'
+        subject: 'Assunto'
+        message: 'Sua Mensagem'
+    placeholders:
+      contact_form:
+        name: 'Nome / Sobrenome'
+        email: 'Email para contato'
+        subject: 'Assunto do email'
+        message: 'Digite o que quiser'
+
+  mail_form:
+    errors:
+      models:
+        contact_form:
+          attributes:
+            name:
+              blank: 'Campo não preenchido'
+            email:
+              blank: 'Email não preenchido'

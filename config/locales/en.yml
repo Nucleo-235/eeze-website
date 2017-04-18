@@ -11,3 +11,8 @@ en:
       ImageProjectContent: imagem
       YoutubeProjectContent: YouTube
       VimeoProjectContent: Vimeo
+
+  helpers:
+    submit:
+      contact_form:
+        create: 'Send'

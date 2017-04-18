@@ -1,0 +1,197 @@
+body {
+    position: relative;
+    padding: 60px 0 130px 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body[class="pages#home"] {
+    background-color: $color__bg;
+    background-image: $bg__boxes;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a:focus, a:hover {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 60px;
+    justify-content: center;
+    flex-flow: column wrap;
+    background: linear-gradient(to right, $color__red, $color__pink);
+    transition: margin .25s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    a, button { display: flex; }
+    button { top: 0.75rem; padding: 4px 0; }
+}
+
+#navbarCollapse ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    li a {
+       font-family: $font__text;
+       color: #fff;
+       font-size: 20px;
+       padding: 24px 0 16px 0;
+       justify-content: center;
+   }
+}
+
+footer {
+    height: 130px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, $color__red, $color__pink);
+    background-size: 100% 150%;
+    background-position: center bottom;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    a { zoom: 1.2; margin-bottom: 8px; }
+    small { font-size: 8px; color: #fff; }
+}
+
+
+#brand {
+    min-height: calc(100vh - 60px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: $bg__gradient;
+    .carousel-item {
+        width: 90vw;
+        max-width: 768px;
+        min-height: 400px;
+        justify-content: center;
+        align-items: center;
+        h1 > span {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            align-items: center;
+            > span {
+               margin: 0 8px;
+               > span {
+                  @include titles;
+               }
+            }
+        }
+        .active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .scroll {
+        position: absolute;
+        bottom: 10px;
+    }
+
+
+}
+
+#links {
+  > a {
+      height: 224px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      background-size: cover;
+      h1 { margin: 0; }
+      span {
+          display: flex;
+          align-items: center;
+          &:before, &:after {
+              content: '';
+              width: 30px;
+              background: rgba($color__sec, .5);
+              height: 1px;
+              margin: 5px;
+          }
+      }
+  }
+  .projetos { background-image: url(image_path('projetos.jpg')); }
+  .quemsomos { background-image: url(image_path('quemsomos.jpg')); }
+}
+
+#tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 40px 0;
+    border-bottom: none;
+    li {
+        font-size: 2.5em;
+        a {
+            @include titles;
+            opacity: .6;
+            padding: 8px 0;
+            background-color: transparent;
+            border: none;
+            &.active {
+                opacity: 1;
+                border-bottom: solid 2px;
+                border-color: #fff;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #tab-content > div {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+    #brand {
+      align-items: baseline;
+      background-image: none;
+      min-height: auto;
+      #svg-brand { zoom: 1.25; }
+      .carousel-item { min-height: 450px; }
+    }
+    .navbar {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    #navbarCollapse{
+        width: auto;
+        ul {
+          height: auto;
+          li a {
+            padding: 8px 16px;
+            @include titles;
+          }
+          .divider { display: none; }
+        }
+    }
+
+    body[class="pages#home"] {
+        #content {
+          background-image: $bg__gradient_full2;
+        }
+    }
+}

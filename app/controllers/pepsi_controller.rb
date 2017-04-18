@@ -1,0 +1,2 @@
+class PepsiController < ApplicationController
+end

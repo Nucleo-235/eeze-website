@@ -1,0 +1,19 @@
+section#brand  
+  #carousel class="carousel slide"
+    ol class="carousel-indicators"
+      li.active data-target="#carousel" data-slide-to="0"
+      li data-target="#carousel" data-slide-to="1"
+      li data-target="#carousel" data-slide-to="2"
+    .carousel-inner role="listbox"
+      .carousel-item.active 
+        #svg-brand = svg 'brand'
+      .carousel-item
+        h1.tlt Lorem ipsum dolor sit amet, consectetur adipisicing
+      .carousel-item
+        h1.tlt Lorem2 ipsum dolor sit amet, consectetur adipisicing
+    
+  .scroll.hidden-lg-up = svg 'scroll'
+
+#content class="hidden-md-down"
+  section#project = render 'pepsi/pepsi'
+  section#quem-somos = render 'quem_somos/quemsomos'

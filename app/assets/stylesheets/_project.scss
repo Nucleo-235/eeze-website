@@ -1,0 +1,120 @@
+body[class="pepsi#index"] {
+  background-image:  url(image_path('pattern-pepsi.png')), $bg__gradient_full;
+}
+
+#project {
+    padding: 40px 16px 0 16px;
+    #parallax-container > img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+        object-position: 46% 50%;
+    }
+    h1 { margin: 0.67em 0 0 0; }
+    p { color: #fff; margin-left: 24px; }
+    .carousel-item {
+      height: 50vw;
+      img { width: 100%; height: auto; }
+    }
+    iframe {
+      width: calc(100% + 32px);
+      min-height: 100%;
+      margin-left: -16px;
+      margin-bottom: -5px;
+    }
+}
+
+
+//Desktop only
+#scroll-project {
+    margin: 32px auto 0px auto;
+    width: 2px;
+    opacity: .5;
+}
+
+#tab-content {
+    > div:not([id="processo"]) {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    #processo p {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+#mansory {
+    padding: 32px 0;
+    margin-left: -16px;
+    width: 100vw;
+    overflow-x: scroll;
+}
+.grid{
+  height: calc(194px * 2);
+  .box img{
+    display: block;
+    width: 192px;
+    height: 192px;
+  }
+  .box-w img{ width: 384px; }
+  .box-h img{ height: 384px; }
+  .box-b img{ width: 384px; height: 384px; }
+}
+
+@include media-breakpoint-up(lg) {
+    #project {
+        *:not([id="parallax-scene"]) {
+          z-index: 1;
+        }
+        #parallax-container { min-height: 500px; }
+        #parallax-container > img {
+            height: 500px;
+            object-position: 48% 50%;
+            position: absolute;
+        }
+        h1 { display: none; }
+        p { margin-left: 0; }
+        #tab-content { padding: 80px 0; }
+        #gameplay.active {
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            img {
+                flex: 0 1 420px;
+                height: 800px;
+            }
+        }
+        iframe {
+            background-image: $bg__gradient_full;
+            position: absolute;
+            width: 296px;
+            height: 512px;
+            min-height: auto;
+            top: 106px;
+        }
+    }
+    #parallax-scene {
+        height: 500px;
+        .layer {
+          right: 0;
+          img { position: absolute;  zoom: 0.7; }
+          &:nth-child(1) img { right: 100px; zoom: 1; }
+          &:nth-child(2) img { top: 320px; right: 0px; }
+          &:nth-child(3) img { left: 500px; }
+          &:nth-child(4) img { top: 200px; right: 0; left:0; margin: 0 auto; }
+          &:nth-child(5) img { top: 200px; right: 450px; }
+          &:nth-child(6) img { right: 0; }
+          &:nth-child(7) img { left: 100px; }
+          &:nth-child(8) img { left: 300px; }
+          &:nth-child(9) img { top: 400px; right: 100px; }
+          &:nth-child(10) img { top: 500px; left: 100px; }
+          &:nth-child(11) img { top: 800px; }
+        }
+    }
+
+}
+
+@include media-breakpoint-up(xl) {
+  #parallax-scene .layer img { zoom: .85; }
+}
