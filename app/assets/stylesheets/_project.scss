@@ -56,11 +56,32 @@ body[class="pepsi#index"] {
     }
 }
 #project-content {
-    padding: 16px 0;
     > div:not([id="processo"]) {
       max-width: 768px;
       margin: 0 auto;
     }
+    #processo p {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+#mansory {
+    padding: 32px 0;
+    margin-left: -16px;
+    width: 100vw;
+    overflow-x: scroll;
+}
+.grid{
+  height: calc(194px * 2);
+  .box img{
+    display: block;
+    width: 192px;
+    height: 192px;
+  }
+  .box-w img{ width: 384px; }
+  .box-h img{ height: 384px; }
+  .box-b img{ width: 384px; height: 384px; }
 }
 
 
@@ -76,9 +97,28 @@ body[class="pepsi#index"] {
     #project {
         > img {
             height: 500px;
-            object-position: 50% 50%;
+            object-position: 48% 50%;
         }
         h1 { display: none; }
         p { margin-left: 0; }
+        #project-content { padding: 80px 0; }
+        #gameplay.active {
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            img {
+                flex: 0 1 420px;
+                height: 800px;
+            }
+        }
+        iframe {
+            background-image: $bg__gradient_full;
+            position: absolute;
+            width: 296px;
+            height: 512px;
+            min-height: auto;
+            top: 106px;
+        }
     }
 }

@@ -9,7 +9,7 @@ gem 'http_accept_language'
 gem 'globalize', '~> 5.0.0'
 gem 'responders'
 gem 'friendly_id', '~> 5.1.0'
-
+gem 'isotope-rails'
 # gem 'redis'
 # gem 'redis-namespace'
 # gem 'sidekiq', '~> 3.2.6'

@@ -14,4 +14,10 @@ $(function() {
   $('#brand #carousel').on('slide.bs.carousel', function () {
     $('.tlt').textillate('start');
   })
+
+  $('.grid').isotope({
+  	layoutMode: 'masonryHorizontal',
+  	gutterWidth: 0
+  });
+  $('#mansory').append($('.grid'));
 });
