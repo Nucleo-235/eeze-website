@@ -9,7 +9,6 @@ $(function() {
     interval: 5000,
     ride: "carousel"
   })
-  
 
   $('#carousel').swipe({
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -32,6 +31,21 @@ $(function() {
           $(".navbar").removeClass("scrolled");
       }
   });
+
+	function goToByScroll(id){
+    id = id.replace("link-", "");
+		var offset = $("#"+id).offset().top - 60;
+    $('html,body').animate({ scrollTop: offset }, 'slow');
+	}
+
+  $(".navbar-nav li a").click(function(e) {
+			if ($(window).width() > 990 && this.pathname != '/') {
+		    e.preventDefault();
+        console.log(this.pathname);
+        console.log(e);
+		    goToByScroll(this.id);
+			}
+	});
 
   $('.grid').isotope({
   	layoutMode: 'masonryHorizontal',

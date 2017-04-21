@@ -8,9 +8,9 @@ section#brand
       .carousel-item.active 
         #svg-brand = svg 'brand'
       .carousel-item
-        h1.tlt Lorem ipsum dolor sit amet, consectetur adipisicing
+        h1.tlt = localized_value_string(@global_page, 'home.text1', 'Lorem ipsum dolor sit amet, consectetur adipisicing')
       .carousel-item
-        h1.tlt Lorem2 ipsum dolor sit amet, consectetur adipisicing
+        h1.tlt = localized_value_string(@global_page, 'home.text2', 'Lorem2 ipsum dolor sit amet, consectetur adipisicing')
     
   .scroll.hidden-lg-up = svg 'scroll'
 

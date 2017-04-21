@@ -5,10 +5,10 @@ nav class="navbar navbar-toggleable-md"
   #navbarCollapse class="collapse navbar-collapse"
     ul class="navbar-nav"
       li.nav-item
-        a.nav-link href="." Home
+        a.nav-link href="." = localized_value_string(@global_page, 'menu.items.home', 'Home')
         .divider = svg 'divider'
       li.nav-item
-        a.nav-link href="/pepsi" Projetos
+        a.nav-link id="link-project" href="/pepsi" = localized_value_string(@global_page, 'menu.items.projetos', 'Projetos')
         .divider = svg 'divider'
       li.nav-item
-        a.nav-link href="/quem_somos" Quem Somos
+        a.nav-link id="link-quem-somos" href="/quem_somos" = localized_value_string(@global_page, 'menu.items.quemsomos', 'Quem Somos')

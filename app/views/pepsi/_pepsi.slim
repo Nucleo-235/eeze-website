@@ -10,22 +10,21 @@
 
 ul#tabs class="nav nav-tabs hidden-md-down" role="tablist"
   li class="nav-item"
-    a class="nav-link active" data-toggle="tab" href="#sinopse" role="tab" Sinopse
+    a class="nav-link active" data-toggle="tab" href="#sinopse" role="tab" = localized_value_string(@global_page, 'projeto.tabs.sinopse', 'Sinopse')
   li class="nav-item"
-    a class="nav-link" data-toggle="tab" href="#processo" role="tab" Processo
+    a class="nav-link" data-toggle="tab" href="#processo" role="tab" = localized_value_string(@global_page, 'projeto.tabs.processo', 'Processo')
   li class="nav-item"
-    a class="nav-link" data-toggle="tab" href="#gameplay" role="tab" Gameplay
+    a class="nav-link" data-toggle="tab" href="#gameplay" role="tab" = localized_value_string(@global_page, 'projeto.tabs.gameplay', 'Gameplay')
 
 #tab-content.tab-content
   #sinopse class="tab-pane fade show active" role="tabpanel"
-    h1 Sinopse
-    p 
-      | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
-      | <br/><br/> Nam nec cellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
-  
+    h1 = localized_value_string(@global_page, 'projeto.content.sinopse.title', 'Sinopse')
+    = localized_value_text(@global_page, 'projeto.content.sinopse.text1', "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.") 
+    = localized_value_text(@global_page, 'projeto.content.sinopse.text2', "Nam nec cellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.")
+
   #processo class="tab-pane fade" role="tabpanel" 
-    h1 Processo
-    p  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+    h1 = localized_value_string(@global_page, 'projeto.content.processo.title', 'Processo')
+    = localized_value_text(@global_page, 'projeto.content.processo.text', "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.") 
     #carousel class="carousel slide hidden-md-up" data-ride="carousel"
       ol class="carousel-indicators"
         - for i in (0..2)
@@ -46,7 +45,7 @@ ul#tabs class="nav nav-tabs hidden-md-down" role="tablist"
 
               
   #gameplay class="tab-pane fade" role="tabpanel"
-    h1 Gameplay
+    h1 = localized_value_string(@global_page, 'projeto.content.gameplay.title', 'Gameplay')
   	img.hidden-md-down src="#{image_path('gameplay.png')}" alt="Gameplay"
     iframe src="http://player.vimeo.com/video/143253867?title=0&byline=0&portrait=0" width="284" height="505" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
 		
