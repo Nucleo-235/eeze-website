@@ -29,14 +29,18 @@ body[class="quem_somos#index"] {
       .form-group { margin-bottom: .5rem; }
       label, .help-block{ display: none; }
       ::-webkit-input-placeholder  {
-        color:rgba(255, 255, 255, 0.5);
+        color: rgba(0, 0, 0, 0.35);
         letter-spacing: .05em;
       }
       input, textarea {
-          background-color: rgba(255, 106, 236, 0.85);
-          color: #fff;
+          background-color: rgba(255, 255, 255, 0.75);
+          color: #000;
           border-radius: 0;
           border-color: rgba(255, 255, 255, 0.5);
+          &:focus {
+              border: solid 1px white;
+              outline: solid 1px #fff;
+          }
       }
       input.btn{
           width: 100%;

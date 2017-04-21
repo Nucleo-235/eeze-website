@@ -39,7 +39,6 @@ body[class="pepsi#index"] {
     }
     #processo p {
         max-width: 768px;
-        margin: 0 auto;
     }
 }
 
@@ -71,10 +70,17 @@ body[class="pepsi#index"] {
             height: 500px;
             object-position: 48% 50%;
             position: absolute;
+            left: 0;
+            right: 0;
         }
         h1 { display: none; }
         p { margin-left: 0; }
-        #tab-content { padding: 80px 0; }
+        #tab-content {
+          padding: 80px 0;
+          #processo p {
+              margin: 0 auto;
+          }
+        }
         #gameplay.active {
             position: relative;
             display: flex;
@@ -96,6 +102,7 @@ body[class="pepsi#index"] {
     }
     #parallax-scene {
         height: 500px;
+        padding: 0;
         .layer {
           right: 0;
           img { position: absolute;  zoom: 0.7; }

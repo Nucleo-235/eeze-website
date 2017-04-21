@@ -9,11 +9,29 @@ $(function() {
     interval: 5000,
     ride: "carousel"
   })
+  
+
+  $('#carousel').swipe({
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == 'left') $(this).carousel('next');
+      if (direction == 'right') $(this).carousel('prev');
+    },
+    allowPageScroll:"vertical"
+  });
 
   $('.tlt').textillate({ autoStart: false, in: { effect: 'fadeIn', shuffle: true } });
   $('#brand #carousel').on('slide.bs.carousel', function () {
     $('.tlt').textillate('start');
   })
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+      if (scroll >= 60) {
+          $(".navbar").addClass("scrolled");
+      } else {
+          $(".navbar").removeClass("scrolled");
+      }
+  });
 
   $('.grid').isotope({
   	layoutMode: 'masonryHorizontal',
