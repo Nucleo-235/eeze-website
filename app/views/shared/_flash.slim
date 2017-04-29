@@ -1,0 +1,22 @@
+- for key, msg in flash
+  - flash_class = key.to_s == "alert" ? "alerts-error" : key
+  div#noty_top_layout_container class="#{flash_class} messageNoty" 
+    span = msg
+
+javascript:
+  var message   = $(".messageNoty").text();
+  var typeMsg   = $(".messageNoty").attr("class");
+  var classMsg  = typeMsg.replace(" messageNoty","");
+  if (classMsg == "alerts-error"){
+    classMsg = "error";
+  } else if (classMsg == "notice"){
+    classMsg = "success";
+  } else {
+    classMsg = "warning";
+  } 
+  $(".messageNoty").noty({
+    layout: "top",
+    text: message,
+    type: classMsg,
+    timeout: 4000
+  });
