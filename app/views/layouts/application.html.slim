@@ -1,13 +1,14 @@
 doctype html
-html
+html lang="pt-BR" xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
   head
     title Eeze
     meta name="viewport" content="width=device-width, initial-scale=1" /
     meta name="theme-color" content="#1f3360"
+    meta http-equiv="Content-Language" content="pt-BR"
     = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
   body class=[@current_page.page_uid]
-    
+
     = render 'shared/nav'
     = yield
     = render 'shared/footer'

@@ -5,7 +5,7 @@
        - for i in @parallax do
         li class="layer" data-depth="#{i[1]}"
           img src="#{image_path(i[0])}"
-  
+
 #scroll-project.hidden-lg-down = svg 'scroll-project'
 
 ul#tabs class="nav nav-tabs hidden-md-down" role="tablist"
@@ -41,38 +41,38 @@ ul#tabs class="nav nav-tabs hidden-md-down" role="tablist"
             .carousel-item 
               img class="d-block img-fluid" src="#{image_path(i)}" alt="slide#{i}"
               
-  	#mansory
+    #mansory
 
               
   #gameplay class="tab-pane fade" role="tabpanel"
     h1 = localized_value_string(@global_page, 'projeto.content.gameplay.title', 'Gameplay')
-  	img.hidden-md-down src="#{image_path('gameplay.png')}" alt="Gameplay"
+    img.hidden-md-down src="#{image_path('gameplay.png')}" alt="Gameplay"
     iframe src="http://player.vimeo.com/video/143253867?title=0&byline=0&portrait=0" width="284" height="505" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
-		
+
 .grid.hidden-md-down
-	.box
-		img src="#{image_path(1)}"
-	.box
-		img src="#{image_path(2)}"
-	.box.box-b
-		img src="#{image_path(2)}"
-	.box
-		img src="#{image_path(2)}"
-	.box
-		img src="#{image_path(1)}"
-	.box.box-h
-		img src="#{image_path(3)}"
-	.box.box-w
-		img src="#{image_path(1)}"
-	.box.box-w
-		img src="#{image_path(3)}"
-	.box
-		img src="#{image_path(2)}"
-	.box
-		img src="#{image_path(2)}"
-	.box.box-w
-		img src="#{image_path(1)}"
-	.box
-		img src="#{image_path(2)}"
-	.box
-		img src="#{image_path(2)}"
+  .box
+    img src="#{image_path(1)}"
+  .box
+    img src="#{image_path(2)}"
+  .box.box-b
+    img src="#{image_path(2)}"
+  .box
+    img src="#{image_path(2)}"
+  .box
+    img src="#{image_path(1)}"
+  .box.box-h
+    img src="#{image_path(3)}"
+  .box.box-w
+    img src="#{image_path(1)}"
+  .box.box-w
+    img src="#{image_path(3)}"
+  .box
+    img src="#{image_path(2)}"
+  .box
+    img src="#{image_path(2)}"
+  .box.box-w
+    img src="#{image_path(1)}"
+  .box
+    img src="#{image_path(2)}"
+  .box
+    img src="#{image_path(2)}"

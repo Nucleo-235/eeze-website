@@ -15,13 +15,25 @@ class PagesController < ApplicationController
                   ['parallax6.png', 0.7], ['parallax7.png', 0.7], ['parallax8.png', 0.4], ['parallax9.png', 0.4], ['parallax10.png', 0.6],
                   ['parallax11.png', 0.5] ]
 
+    @contact = ContactForm.new
+  end
+
+  def pepsi
+  end
+
+  def quem_somos
+    @contact = ContactForm.new
+  end
+
+  def contact
     @contact = ContactForm.new(params[:contact])
     @contact.request = request
     if @contact.deliver
-      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
+      redirect_to root_path, notice: 'Obrigado por enviar sua mensagem. Entraremos em contato em breve!'
     else
-      flash.now[:error] = 'Cannot send message.'
+      redirect_to root_path, error: 'Não foi possível enviar a mensagem.'
     end
 
+    redirect_to_locale_if_not_set
   end
 end

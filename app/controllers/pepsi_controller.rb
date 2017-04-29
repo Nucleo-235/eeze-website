@@ -1,2 +1,0 @@
-class PepsiController < ApplicationController
-end
