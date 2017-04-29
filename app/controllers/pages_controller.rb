@@ -26,14 +26,12 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @contact = ContactForm.new(params[:contact])
+    @contact = ContactForm.new(params[:contact_form])
     @contact.request = request
     if @contact.deliver
       redirect_to root_path, notice: 'Obrigado por enviar sua mensagem. Entraremos em contato em breve!'
     else
-      redirect_to root_path, error: 'Não foi possível enviar a mensagem.'
+      redirect_to root_path, flash: { error: 'Não foi possível enviar a mensagem.' }
     end
-
-    redirect_to_locale_if_not_set
   end
 end
