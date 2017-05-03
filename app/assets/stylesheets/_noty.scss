@@ -9,17 +9,19 @@
   &.success, &.notice {
     ul, li, .noty_message {
       border: none !important;
-      background-color: lightblue !important;
-      color: darkblue !important;
+      background-color: $color__bg !important;
+      color: #fff !important;
+      @include titles;
     }
   }
   .noty_bar {
-    font-size: 26px;
+    font-size: 20px;
     width: 100%;
     text-align: center;
 
     .noty_message {
-      font-size: 22px !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
       padding: 20px !important;
     }
   }

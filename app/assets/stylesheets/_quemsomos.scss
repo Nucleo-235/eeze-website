@@ -1,4 +1,4 @@
-body[class="quem_somos#index"] {
+body[class="pages#quem_somos"] {
   background-image: $bg__gradient_full;
 }
 
@@ -40,6 +40,7 @@ body[class="quem_somos#index"] {
           &:focus {
               border: solid 1px white;
               outline: solid 1px #fff;
+              padding: 0.5rem 0.75rem;
           }
       }
       input.btn{
@@ -76,6 +77,8 @@ body[class="quem_somos#index"] {
           input, textarea {
             background: none;
             border: none;
+
+            color: #fff;
             border-bottom: solid 1px;
           }
           textarea {
@@ -86,14 +89,18 @@ body[class="quem_somos#index"] {
           }
           label {
               display: flex;
-              color: $color__darken;
+              color: darken($color__main, 15%);
               font-family: $font__text;
               font-weight: 700;
               font-size: 20px;
               abbr { order: 2; }
           }
+          ::-webkit-input-placeholder  {
+            color: rgba(white, .5);
+          }
           input.btn { height: 60px; }
           .form-control { padding: 0.5rem 0; }
         }
     }
+
 }
