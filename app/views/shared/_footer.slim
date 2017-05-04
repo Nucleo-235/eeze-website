@@ -1,12 +1,14 @@
 section#links class="hidden-lg-up"
-  - if @current_page.page_uid != 'pepsi#index'
+  - if @current_page.page_uid != 'pages#pepsi'
     a.projetos href="#{pepsi_path}"
       h1 = localized_value_string(@global_page, 'footer.items.projetos.title', 'Projetos')
       span = localized_value_string(@global_page, 'footer.items.projetos.description', 'Veja o que já fizemos')
-  - if @current_page.page_uid != 'quem_somos#index'
+  - if @current_page.page_uid != 'pages#quem_somos'
     a.quemsomos href="#{quem_somos_path}"
       h1 = localized_value_string(@global_page, 'footer.items.quemsomos.title', 'Quem Somos')
       span = localized_value_string(@global_page, 'footer.items.quemsomos.description', 'Saiba mais sobre a eeze')
 footer
   a href="" = svg 'logo'
   small Todos os direitos são reservados a eeze® game studio.
+  #dev 
+    a href="http://nucleo235.com.br/" = svg 'nucleo' 

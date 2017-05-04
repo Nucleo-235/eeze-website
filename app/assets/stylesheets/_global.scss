@@ -1,6 +1,6 @@
 body {
     position: relative;
-    padding: 60px 0 130px 0;
+    padding: 60px 0 180px 0;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -66,7 +66,8 @@ a:focus, a:hover {
 }
 
 footer {
-    height: 130px;
+    height: 180px;
+    padding-bottom: 60px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -79,6 +80,19 @@ footer {
     width: 100%;
     a { zoom: 1.2; margin-bottom: 8px; }
     small { font-size: 8px; color: #fff; }
+    #dev {
+      background-color: #072939;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      a { margin: 0 ;
+        svg { height: 25px; }
+      }
+    }
 }
 
 
@@ -210,5 +224,9 @@ footer {
         #content {
           background-image: $bg__gradient_full2;
         }
+    }
+    footer #dev {
+      height: 60px;
+      a svg { height: 30px; }
     }
 }

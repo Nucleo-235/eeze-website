@@ -14,8 +14,8 @@ h1, h2, h3, h4, h5, h6 {
    @include titles;
 }
 
-h1 { font-size: 3em; }
-h2 { font-size: 2.5em; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
 
 p, span {
   font-family: $font__text;
@@ -25,3 +25,9 @@ p, span {
 
 p { text-align: justify; }
 span { color: $color__sec; font-size: 1.2em;}
+
+
+@include media-breakpoint-up(md) {
+  h1 { font-size: 3em; }
+  h2 { font-size: 2.5em; }
+}

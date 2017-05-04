@@ -54,6 +54,6 @@ $(function() {
   $('#mansory').append($('.grid'));
 
   var scene = document.getElementById('parallax-scene');
-  var parallax = new Parallax(scene);
+  if (scene) { var parallax = new Parallax(scene); }
 
 });
