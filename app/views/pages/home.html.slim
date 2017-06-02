@@ -17,3 +17,9 @@ section#brand
 #content class="hidden-md-down"
   section#project = render 'pages/shared/pepsi'
   section#quem-somos = render 'pages/shared/quem_somos'
+
+#imageModal.modal.fade
+  .modal-dialog role="document"
+    .modal-content
+      .modal-body
+        img.js-modal-image src="#{image_path(1)}"

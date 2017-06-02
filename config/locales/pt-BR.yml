@@ -29,7 +29,7 @@ pt-BR:
         name: 'Nome / Sobrenome'
         email: 'Email para contato'
         subject: 'Assunto do email'
-        message: 'Digite o que quiser'
+        message: 'Fale com a gente'
 
   mail_form:
     errors:

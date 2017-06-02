@@ -5,7 +5,7 @@ body {
     overflow-x: hidden;
 }
 
-body[class="pages#home"] {
+body[class*="pages#home"] {
     background-color: $color__bg;
     background-image: $bg__boxes;
 }
@@ -220,7 +220,7 @@ footer {
         }
     }
 
-    body[class="pages#home"] {
+    body[class*="pages#home"] {
         #content {
           background-image: $bg__gradient_full2;
         }
@@ -229,4 +229,8 @@ footer {
       height: 60px;
       a svg { height: 30px; }
     }
+}
+
+.modal-body {
+  padding: 4px;
 }
