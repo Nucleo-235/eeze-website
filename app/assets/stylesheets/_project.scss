@@ -174,3 +174,41 @@ img.js-modal-image {
     justify-content: center;
     width: 100%;
 }
+
+
+
+#projetosGrid > div {
+    height: 440px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    overflow: hidden;
+
+
+    .conheca {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        background-color: #50b589;
+        transition: bottom .25s ease;
+    }
+
+    &:hover .conheca{
+      bottom: 0;
+    }
+}
+@media (min-width: 540px) and (max-width: 768px) {
+  #projetosGrid > div {
+      height: 600px;
+  }
+}
+@media (min-width: 768px) {
+  #projetosGrid > div {
+      height: 540px;
+  }
+}

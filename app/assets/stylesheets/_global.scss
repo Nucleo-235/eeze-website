@@ -51,6 +51,14 @@ a:focus, a:hover {
     }
 }
 
+body[class*="projects"] .navbar .nav-background {
+    opacity: 1;
+}
+
+body[class*="projects"] #links .projetos {
+  display: none;
+}
+
 #navbarCollapse ul {
     display: flex;
     justify-content: center;
